@@ -133,3 +133,4 @@ install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/core/include/tengine_c_api.h DESTINAT
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/core/include/cpu_device.h DESTINATION include)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/core/include/tengine_test_api.h DESTINATION include)
 
+add_subdirectory(examples)
