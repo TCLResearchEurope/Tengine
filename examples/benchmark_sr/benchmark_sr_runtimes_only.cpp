@@ -43,7 +43,6 @@ struct Config {
 
         if (proto_file.empty()) {
             proto_file = root_path + DEFAULT_PROTO;
-
         }
         if (model_file.empty()) {
             model_file = root_path + DEFAULT_MODEL;
@@ -139,7 +138,6 @@ Environment init(const Config &config) {
 
     return environment;
 }
-
 
 static inline int get_env_variable_int(const char *variable_name, const int default_value) {
     const char *value_str = std::getenv(variable_name);
