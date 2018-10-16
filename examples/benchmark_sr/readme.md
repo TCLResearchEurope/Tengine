@@ -7,7 +7,7 @@ is stored:
 - libgnustl_shared.so - probably from location like
     android-ndk-r16b/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_shared.so
     
-Also we need the model to run so from Inference/resources/lfs we need
+Also we need the model to run so from project Inference directory Inference/resources/lfs we need
 - FSRCNN-s_net.prototxt 
 - TCL_s_x2_denoise_v4.caffemodel
 
@@ -15,8 +15,9 @@ After collecting these files in the directory like /data/local/tmp/Tengine we ca
 ```bash
 
 export LD_LIBRARY_PATH='.'
-OPENBLAS_NUM_THREADS=4 REPEAT_COUNT=4 ./benchmark_sr_runtimes_only
+SLEEP_TIME=0 OPENBLAS_NUM_THREADS=4 REPEAT_COUNT=4 ./benchmark_sr_runtimes_only
 ```
+Tengine has the option to set active cores and it's available in benchmark_sr.
 Library itself has some debug output which is printed apart from lines with time and threads number so the output looks
 like
 
